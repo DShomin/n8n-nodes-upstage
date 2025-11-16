@@ -141,6 +141,27 @@ export class LmChatModelUpstage implements INodeType {
 						description: 'Whether to stream the response',
 						type: 'boolean',
 					},
+					{
+						displayName: 'Reasoning Effort',
+						name: 'reasoning_effort',
+						type: 'options',
+						options: [
+							{
+								name: 'Low',
+								value: 'low',
+								description: 'Disable reasoning for faster responses',
+							},
+							{
+								name: 'High',
+								value: 'high',
+								description:
+									'Enable reasoning for complex tasks (may increase token usage)',
+							},
+						],
+						default: 'low',
+						description:
+							'Controls the level of reasoning effort. Only applicable to Reasoning models.',
+					},
 				],
 			},
 		],
@@ -397,9 +418,15 @@ export class LmChatModelUpstage implements INodeType {
 			maxTokens?: number;
 			temperature?: number;
 			streaming?: boolean;
+			reasoning_effort?: 'low' | 'high';
 		};
 
-		const modelKwargs = {};
+		const modelKwargs: Record<string, unknown> = {};
+
+		// Add reasoning_effort to modelKwargs if specified and not 'low' (default)
+		if (options.reasoning_effort && options.reasoning_effort === 'high') {
+			modelKwargs.reasoning_effort = options.reasoning_effort;
+		}
 
 		const configuration = {
 			baseURL: 'https://api.upstage.ai/v1',
@@ -458,6 +485,7 @@ export class LmChatModelUpstage implements INodeType {
 			maxTokens: options.maxTokens,
 			temperature: options.temperature,
 			streaming: options.streaming || false,
+			...(Object.keys(modelKwargs).length > 0 && { modelKwargs }),
 		};
 
 		// Add tracing callbacks if available (when installed in n8n core)
