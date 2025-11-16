@@ -6,19 +6,19 @@ import type {
 	IHttpRequestOptions,
 } from 'n8n-workflow';
 
-export class DocumentClassificationUpstage implements INodeType {
+export class DocumentClassificationBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Document Classify',
-		name: 'documentClassificationUpstage',
+		displayName: 'Blab Document Classify',
+		name: 'documentClassificationBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Classify documents into predefined categories using Upstage Document Classification',
-		defaults: { name: 'Upstage Document Classify' },
+		defaults: { name: 'Blab Document Classify' },
 		inputs: ['main'],
 		outputs: ['main'],
-		credentials: [{ name: 'upstageApi', required: true }],
+		credentials: [{ name: 'blabApi', required: true }],
 		properties: [
 			{
 				displayName: 'Input Type',

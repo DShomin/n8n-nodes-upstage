@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-upstage-with-reasoning",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Upstage LLM and Embeddings nodes for n8n",
   "license": "MIT",
   "homepage": "https://github.com/UpstageAI/n8n-nodes-upstage",
@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "tsc && npm run copy-assets",
-    "copy-assets": "cp src/upstage_v2.svg dist/ && cp src/nodes/LmChatUpstage/upstage_v2.svg dist/nodes/LmChatUpstage/ && cp src/nodes/EmbeddingsUpstage/upstage_v2.svg dist/nodes/EmbeddingsUpstage/ && cp src/nodes/LmChatModelUpstage/upstage_v2.svg dist/nodes/LmChatModelUpstage/ && cp src/nodes/EmbeddingsUpstageModel/upstage_v2.svg dist/nodes/EmbeddingsUpstageModel/ && cp src/nodes/DocumentParsingUpstage/upstage_v2.svg dist/nodes/DocumentParsingUpstage/ && cp src/nodes/DocumentOCRUpstage/upstage_v2.svg dist/nodes/DocumentOCRUpstage/ && cp src/nodes/InformationExtractionUpstage/upstage_v2.svg dist/nodes/InformationExtractionUpstage/ && cp src/nodes/DocumentClassificationUpstage/upstage_v2.svg dist/nodes/DocumentClassificationUpstage/ || true",
+    "copy-assets": "cp src/upstage_v2.svg dist/ && cp src/nodes/LmChatBlab/upstage_v2.svg dist/nodes/LmChatBlab/ && cp src/nodes/EmbeddingsBlab/upstage_v2.svg dist/nodes/EmbeddingsBlab/ && cp src/nodes/LmChatModelBlab/upstage_v2.svg dist/nodes/LmChatModelBlab/ && cp src/nodes/EmbeddingsBlabModel/upstage_v2.svg dist/nodes/EmbeddingsBlabModel/ && cp src/nodes/DocumentParsingBlab/upstage_v2.svg dist/nodes/DocumentParsingBlab/ && cp src/nodes/DocumentOCRBlab/upstage_v2.svg dist/nodes/DocumentOCRBlab/ && cp src/nodes/InformationExtractionBlab/upstage_v2.svg dist/nodes/InformationExtractionBlab/ && cp src/nodes/DocumentClassificationBlab/upstage_v2.svg dist/nodes/DocumentClassificationBlab/ || true",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build",
@@ -41,17 +41,17 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/UpstageApi.credentials.js"
+      "dist/credentials/BlabApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/LmChatUpstage/LmChatUpstage.node.js",
-      "dist/nodes/EmbeddingsUpstage/EmbeddingsUpstage.node.js",
-      "dist/nodes/LmChatModelUpstage/LmChatModelUpstage.node.js",
-      "dist/nodes/EmbeddingsUpstageModel/EmbeddingsUpstageModel.node.js",
-      "dist/nodes/DocumentParsingUpstage/DocumentParsingUpstage.node.js",
-      "dist/nodes/DocumentOCRUpstage/DocumentOCRUpstage.node.js",
-      "dist/nodes/InformationExtractionUpstage/InformationExtractionUpstage.node.js",
-      "dist/nodes/DocumentClassificationUpstage/DocumentClassificationUpstage.node.js"
+      "dist/nodes/LmChatBlab/LmChatBlab.node.js",
+      "dist/nodes/EmbeddingsBlab/EmbeddingsBlab.node.js",
+      "dist/nodes/LmChatModelBlab/LmChatModelBlab.node.js",
+      "dist/nodes/EmbeddingsBlabModel/EmbeddingsBlabModel.node.js",
+      "dist/nodes/DocumentParsingBlab/DocumentParsingBlab.node.js",
+      "dist/nodes/DocumentOCRBlab/DocumentOCRBlab.node.js",
+      "dist/nodes/InformationExtractionBlab/InformationExtractionBlab.node.js",
+      "dist/nodes/DocumentClassificationBlab/DocumentClassificationBlab.node.js"
     ]
   },
   "engines": {

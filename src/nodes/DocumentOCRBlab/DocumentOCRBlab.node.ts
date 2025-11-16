@@ -52,19 +52,19 @@ function createMultipartFormData(
 	};
 }
 
-export class DocumentOCRUpstage implements INodeType {
+export class DocumentOCRBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Document OCR',
-		name: 'documentOCRUpstage',
+		displayName: 'Blab Document OCR',
+		name: 'documentOCRBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Extract text from document images using Upstage Document OCR. Supports JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, PPTX, XLSX, HWP, HWPX formats.',
-		defaults: { name: 'Upstage Document OCR' },
+		defaults: { name: 'Blab Document OCR' },
 		inputs: ['main'],
 		outputs: ['main'],
-		credentials: [{ name: 'upstageApi', required: true }],
+		credentials: [{ name: 'blabApi', required: true }],
 		properties: [
 			{
 				displayName: 'Binary Property',

@@ -1,14 +1,14 @@
 // Export all credentials
-export { UpstageApi } from './credentials/UpstageApi.credentials';
+export { BlabApi } from './credentials/BlabApi.credentials';
 
 // Export all nodes
-export { LmChatUpstage } from './nodes/LmChatUpstage/LmChatUpstage.node';
-export { EmbeddingsUpstage } from './nodes/EmbeddingsUpstage/EmbeddingsUpstage.node';
-export { DocumentParsingUpstage } from './nodes/DocumentParsingUpstage/DocumentParsingUpstage.node';
-export { DocumentOCRUpstage } from './nodes/DocumentOCRUpstage/DocumentOCRUpstage.node';
-export { InformationExtractionUpstage } from './nodes/InformationExtractionUpstage/InformationExtractionUpstage.node';
-export { DocumentClassificationUpstage } from './nodes/DocumentClassificationUpstage/DocumentClassificationUpstage.node';
+export { LmChatBlab } from './nodes/LmChatBlab/LmChatBlab.node';
+export { EmbeddingsBlab } from './nodes/EmbeddingsBlab/EmbeddingsBlab.node';
+export { DocumentParsingBlab } from './nodes/DocumentParsingBlab/DocumentParsingBlab.node';
+export { DocumentOCRBlab } from './nodes/DocumentOCRBlab/DocumentOCRBlab.node';
+export { InformationExtractionBlab } from './nodes/InformationExtractionBlab/InformationExtractionBlab.node';
+export { DocumentClassificationBlab } from './nodes/DocumentClassificationBlab/DocumentClassificationBlab.node';
 
 // Export LangChain compatible nodes
-export { LmChatModelUpstage } from './nodes/LmChatModelUpstage/LmChatModelUpstage.node';
-export { EmbeddingsUpstageModel } from './nodes/EmbeddingsUpstageModel/EmbeddingsUpstageModel.node';
+export { LmChatModelBlab } from './nodes/LmChatModelBlab/LmChatModelBlab.node';
+export { EmbeddingsBlabModel } from './nodes/EmbeddingsBlabModel/EmbeddingsBlabModel.node';

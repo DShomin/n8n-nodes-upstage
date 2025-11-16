@@ -6,22 +6,22 @@ import type {
 	IHttpRequestOptions,
 } from 'n8n-workflow';
 
-export class LmChatUpstage implements INodeType {
+export class LmChatBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Solar Chat',
-		name: 'lmChatUpstage',
+		displayName: 'Blab Solar Chat',
+		name: 'lmChatBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description: 'Use Upstage Solar models for chat completions',
 		defaults: {
-			name: 'Upstage Solar Chat',
+			name: 'Blab Solar Chat',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'upstageApi',
+				name: 'blabApi',
 				required: true,
 			},
 		],

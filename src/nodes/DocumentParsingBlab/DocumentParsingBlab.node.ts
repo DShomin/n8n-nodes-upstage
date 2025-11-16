@@ -60,19 +60,19 @@ function createMultipartFormData(
 	};
 }
 
-export class DocumentParsingUpstage implements INodeType {
+export class DocumentParsingBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Document Parse',
-		name: 'documentParsingUpstage',
+		displayName: 'Blab Document Parse',
+		name: 'documentParsingBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Convert documents into structured HTML/Markdown using Upstage Document Parse',
-		defaults: { name: 'Upstage Document Parse' },
+		defaults: { name: 'Blab Document Parse' },
 		inputs: ['main'],
 		outputs: ['main'],
-		credentials: [{ name: 'upstageApi', required: true }],
+		credentials: [{ name: 'blabApi', required: true }],
 		properties: [
 			{
 				displayName: 'Operation',

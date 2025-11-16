@@ -13,16 +13,16 @@ import { makeN8nLlmFailedAttemptHandler } from '../../utils/n8nLlmFailedAttemptH
 import { getHttpProxyAgent } from '../../utils/httpProxyAgent';
 import { getConnectionHintNoticeField } from '../../utils/sharedFields';
 
-export class LmChatModelUpstage implements INodeType {
+export class LmChatModelBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Solar Chat for Agent',
-		name: 'lmChatModelUpstage',
+		displayName: 'Blab Solar Chat for Agent',
+		name: 'lmChatModelBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description: 'For advanced usage with an AI chain',
 		defaults: {
-			name: 'Upstage Solar Chat for Agent',
+			name: 'Blab Solar Chat for Agent',
 		},
 		codex: {
 			categories: ['AI'],
@@ -43,7 +43,7 @@ export class LmChatModelUpstage implements INodeType {
 		outputNames: ['Model'],
 		credentials: [
 			{
-				name: 'upstageApi',
+				name: 'blabApi',
 				required: true,
 			},
 		],

@@ -5,10 +5,10 @@ import type {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class UpstageApi implements ICredentialType {
-	name = 'upstageApi';
+export class BlabApi implements ICredentialType {
+	name = 'blabApi';
 
-	displayName = 'Upstage API';
+	displayName = 'Blab API';
 
 	documentationUrl =
 		'https://console.upstage.ai/docs/getting-started/quick-start';

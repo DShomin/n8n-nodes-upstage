@@ -6,7 +6,7 @@ import type {
 	IHttpRequestOptions,
 } from 'n8n-workflow';
 
-export class InformationExtractionUpstage implements INodeType {
+export class InformationExtractionBlab implements INodeType {
 	// JSON structure validation and fix method
 	private static validateAndFixJsonStructure(jsonString: string): string {
 		try {
@@ -75,7 +75,7 @@ export class InformationExtractionUpstage implements INodeType {
 				);
 
 				// Step 4: Advanced modification attempt
-				fixedJson = InformationExtractionUpstage.advancedJsonFix(fixedJson);
+				fixedJson = InformationExtractionBlab.advancedJsonFix(fixedJson);
 
 				// Step 5: Final validation
 				try {
@@ -119,17 +119,17 @@ export class InformationExtractionUpstage implements INodeType {
 		return jsonString;
 	}
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Information Extract',
-		name: 'informationExtractionUpstage',
+		displayName: 'Blab Information Extract',
+		name: 'informationExtractionBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Extract structured data from documents/images using Upstage Information Extraction',
-		defaults: { name: 'Upstage Information Extract' },
+		defaults: { name: 'Blab Information Extract' },
 		inputs: ['main'],
 		outputs: ['main'],
-		credentials: [{ name: 'upstageApi', required: true }],
+		credentials: [{ name: 'blabApi', required: true }],
 		properties: [
 			{
 				displayName: 'Operation',
@@ -370,7 +370,7 @@ export class InformationExtractionUpstage implements INodeType {
 
 									// Attempt JSON structure validation and modification
 									cleanedJson =
-										InformationExtractionUpstage.validateAndFixJsonStructure(
+										InformationExtractionBlab.validateAndFixJsonStructure(
 											cleanedJson
 										);
 

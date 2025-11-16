@@ -6,23 +6,23 @@ import type {
 	IHttpRequestOptions,
 } from 'n8n-workflow';
 
-export class EmbeddingsUpstage implements INodeType {
+export class EmbeddingsBlab implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Embed',
-		name: 'embeddingsUpstage',
+		displayName: 'Blab Embed',
+		name: 'embeddingsBlab',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Generate embeddings using Upstage Solar embedding models. Supports up to 100 strings per request with max 204,800 total tokens. Each text should be under 4000 tokens (optimal: under 512 tokens).',
 		defaults: {
-			name: 'Upstage Embed',
+			name: 'Blab Embed',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'upstageApi',
+				name: 'blabApi',
 				required: true,
 			},
 		],

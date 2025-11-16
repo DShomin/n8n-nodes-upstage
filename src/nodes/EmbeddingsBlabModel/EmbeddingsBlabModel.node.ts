@@ -8,17 +8,17 @@ import type {
 import { logWrapper } from '../../utils/logWrapper';
 import { getConnectionHintNoticeField } from '../../utils/sharedFields';
 
-export class EmbeddingsUpstageModel implements INodeType {
+export class EmbeddingsBlabModel implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Upstage Embed for Agent',
-		name: 'embeddingsUpstageModel',
+		displayName: 'Blab Embed for Agent',
+		name: 'embeddingsBlabModel',
 		icon: 'file:upstage_v2.svg',
 		group: ['transform'],
 		version: 1,
 		description:
 			'Embedding Model for Vector DB - Upstage Solar Embeddings. Supports up to 100 strings per request with max 204,800 total tokens. Each text should be under 4000 tokens (optimal: under 512 tokens).',
 		defaults: {
-			name: 'Upstage Embed for Agent',
+			name: 'Blab Embed for Agent',
 		},
 		codex: {
 			categories: ['AI'],
@@ -38,7 +38,7 @@ export class EmbeddingsUpstageModel implements INodeType {
 		outputNames: ['Embeddings'],
 		credentials: [
 			{
-				name: 'upstageApi',
+				name: 'blabApi',
 				required: true,
 			},
 		],
