@@ -291,7 +291,7 @@ export class DocumentParsingBlab implements INodeType {
 					const response =
 						await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'upstageApi',
+							'blabApi',
 							requestOptions
 						);
 
@@ -341,7 +341,7 @@ export class DocumentParsingBlab implements INodeType {
 					const response =
 						await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'upstageApi',
+							'blabApi',
 							requestOptions
 						);
 					returnData.push({
@@ -356,7 +356,7 @@ export class DocumentParsingBlab implements INodeType {
 					const response =
 						await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'upstageApi',
+							'blabApi',
 							requestOptions
 						);
 					returnData.push({

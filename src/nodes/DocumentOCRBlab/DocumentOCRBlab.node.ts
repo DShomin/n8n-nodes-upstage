@@ -183,7 +183,7 @@ export class DocumentOCRBlab implements INodeType {
 
 				const response = await this.helpers.httpRequestWithAuthentication.call(
 					this,
-					'upstageApi',
+					'blabApi',
 					requestOptions
 				);
 

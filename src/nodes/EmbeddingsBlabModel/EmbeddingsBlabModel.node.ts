@@ -71,7 +71,7 @@ export class EmbeddingsBlabModel implements INodeType {
 		itemIndex: number
 	): Promise<SupplyData> {
 		this.logger.debug('Supply data for embeddings');
-		const credentials = await this.getCredentials('upstageApi');
+		const credentials = await this.getCredentials('blabApi');
 		const model = this.getNodeParameter('model', itemIndex) as string;
 
 		// Create a custom embedding model that implements LangChain's interface

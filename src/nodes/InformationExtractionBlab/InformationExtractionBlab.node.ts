@@ -467,7 +467,7 @@ export class InformationExtractionBlab implements INodeType {
 					const response =
 						await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'upstageApi',
+							'blabApi',
 							requestOptions
 						);
 
@@ -558,7 +558,7 @@ export class InformationExtractionBlab implements INodeType {
 					const response =
 						await this.helpers.httpRequestWithAuthentication.call(
 							this,
-							'upstageApi',
+							'blabApi',
 							requestOptions
 						);
 

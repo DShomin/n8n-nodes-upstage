@@ -172,7 +172,7 @@ export class LmChatModelBlab implements INodeType {
 			async getModels(
 				this: ILoadOptionsFunctions
 			): Promise<INodePropertyOptions[]> {
-				const credentials = await this.getCredentials('upstageApi');
+				const credentials = await this.getCredentials('blabApi');
 				const requestOptions = {
 					method: 'GET' as const,
 					headers: {
@@ -295,7 +295,7 @@ export class LmChatModelBlab implements INodeType {
 		this: ISupplyDataFunctions,
 		itemIndex: number
 	): Promise<SupplyData> {
-		const credentials = await this.getCredentials('upstageApi');
+		const credentials = await this.getCredentials('blabApi');
 
 		let modelName = this.getNodeParameter('model', itemIndex) as string;
 
