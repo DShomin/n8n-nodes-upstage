@@ -167,7 +167,7 @@ export class LmChatUpstage implements INodeType {
 						],
 						default: 'low',
 						description:
-							'Controls the level of reasoning effort. Only applicable to Reasoning models.',
+							'Controls the level of reasoning effort. Only applicable to solar-pro2 models (solar-pro2, solar-pro2-preview, etc.).',
 					},
 					{
 						displayName: 'Frequency Penalty',
@@ -291,6 +291,14 @@ export class LmChatUpstage implements INodeType {
 					messages,
 					...options,
 				};
+
+				// Remove reasoning_effort if not using solar-pro2 model
+				if (
+					requestBody.reasoning_effort &&
+					!model.toLowerCase().includes('pro2')
+				) {
+					delete requestBody.reasoning_effort;
+				}
 
 				// Handle response_format properly
 				if (options.response_format && options.response_format !== 'text') {

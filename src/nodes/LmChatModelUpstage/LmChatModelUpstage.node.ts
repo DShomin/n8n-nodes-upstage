@@ -160,7 +160,7 @@ export class LmChatModelUpstage implements INodeType {
 						],
 						default: 'low',
 						description:
-							'Controls the level of reasoning effort. Only applicable to Reasoning models.',
+							'Controls the level of reasoning effort. Only applicable to solar-pro2 models (solar-pro2, solar-pro2-preview, etc.).',
 					},
 				],
 			},
@@ -423,8 +423,12 @@ export class LmChatModelUpstage implements INodeType {
 
 		const modelKwargs: Record<string, unknown> = {};
 
-		// Add reasoning_effort to modelKwargs if specified and not 'low' (default)
-		if (options.reasoning_effort && options.reasoning_effort === 'high') {
+		// Add reasoning_effort to modelKwargs only for solar-pro2 models and when set to 'high'
+		if (
+			options.reasoning_effort &&
+			options.reasoning_effort === 'high' &&
+			modelName.toLowerCase().includes('pro2')
+		) {
 			modelKwargs.reasoning_effort = options.reasoning_effort;
 		}
 
