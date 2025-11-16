@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-upstage",
+  "name": "n8n-nodes-upstage-with-reasoning",
   "version": "0.2.1",
   "description": "Upstage LLM and Embeddings nodes for n8n",
   "license": "MIT",
